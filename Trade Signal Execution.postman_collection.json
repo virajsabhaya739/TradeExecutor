@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "a33cc8cc-564d-4c93-87ca-ae6944b50992",
+		"name": "Trade Signal Execution",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45711477",
+		"_collection_link": "https://virajtest-5835052.postman.co/workspace/1d9893e3-eab4-4bf2-8adb-f4c46d92afa5/collection/45711477-a33cc8cc-564d-4c93-87ca-ae6944b50992?action=share&source=collection_link&creator=45711477"
+	},
+	"item": [
+		{
+			"name": "Send trade signal",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"symbol\": \"BTCUSD\",\r\n    \"side\": \"BUY\",\r\n    \"entry_price\": 68000,\r\n    \"stop_loss\": 67500,\r\n    \"target\": 69000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/signal",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"signal"
+					]
+				},
+				"description": "This POST request is used to send a new trading signal to the API. The request body should contain a JSON object with the signal details, including the trading `symbol`, the trade `side` (e.g., 'BUY' or 'SELL'), the `entry_price`, `stop_loss`, and `target` prices. A successful request will typically return a `200 OK` status and a confirmation message."
+			},
+			"response": []
+		},
+		{
+			"name": "Get trades",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/trades",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"trades"
+					]
+				},
+				"description": "This GET request retrieves a list of all recorded trades from the API. It does not require any request body or query parameters. A successful response will have a `200 OK` status and return a JSON array containing details of each trade, including its ID, symbol, side, status, entry price, stop loss, target, and timestamp."
+			},
+			"response": []
+		},
+		{
+			"name": "API Documentation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/doc",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"doc"
+					]
+				},
+				"description": "This GET request retrieves the Swagger documentation for the API. It provides a machine-readable description of the available endpoints, their parameters, and expected responses. A successful response will have a `200 OK` status and return a JSON object representing the Swagger specification."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:5000",
+			"type": "string"
+		}
+	]
+}
