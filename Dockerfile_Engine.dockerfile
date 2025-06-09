@@ -3,4 +3,5 @@ WORKDIR /app
 COPY . .
 RUN dotnet restore
 RUN dotnet build
+dotnet test --logger "trx;logfilename=MyTestReport.trx" --results-directory MyTestResults
 CMD ["dotnet", "run"]
