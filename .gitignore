@@ -52,3 +52,19 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+
+
+
+# Flask/Python
+__pycache__/
+*.pyc
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE specific files (add your IDE if not listed)
+.vscode/
+.idea/
+
+# Logs
+*.log
