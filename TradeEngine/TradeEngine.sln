@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeEngine", "TradeEngine\TradeEngine.csproj", "{3D52AF92-BB74-483A-8050-3AE266948BBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradeEngine", "TradeEngine\TradeEngine.csproj", "{3D52AF92-BB74-483A-8050-3AE266948BBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeEngine.Tests", "TradeEngine.Tests\TradeEngine.Tests.csproj", "{EECBDF65-B2C3-4077-B63F-41C5F2736678}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3D52AF92-BB74-483A-8050-3AE266948BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D52AF92-BB74-483A-8050-3AE266948BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D52AF92-BB74-483A-8050-3AE266948BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EECBDF65-B2C3-4077-B63F-41C5F2736678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EECBDF65-B2C3-4077-B63F-41C5F2736678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EECBDF65-B2C3-4077-B63F-41C5F2736678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EECBDF65-B2C3-4077-B63F-41C5F2736678}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
