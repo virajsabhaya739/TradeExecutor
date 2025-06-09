@@ -15,15 +15,25 @@ namespace TradeEngine
     public class TradeRepository
     {
         // To create database aside the project folders, we needs to go out of the bin folder
-        private readonly string _connectionString = "Data Source=" + System.IO.Path.Combine("..", "..", "..", "..", "..", Constants.DataBaseName);
+        private readonly string _connectionString;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TradeRepository"/> class.
         /// Ensures the database and necessary tables are created if they don't exist.
         /// </summary>
-        public TradeRepository()
+        public TradeRepository() : this("Data Source=" + System.IO.Path.Combine("..", "..", "..", "..", "..", Constants.DataBaseName))
         {
             InitializeDatabase();
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TradeRepository"/> class with a specified connection string.
+        /// This constructor is primarily for testing purposes.
+        /// </summary>
+        /// <param name="connectionString">The database connection string.</param>
+        public TradeRepository(string connectionString)
+        {
+            _connectionString = connectionString;
         }
 
         /// <summary>
