@@ -1,6 +1,6 @@
 ﻿namespace TradeEngine
 {
-    internal class Constants
+    public class Constants
     {
         public static readonly string TradeStatusOpen = "OPEN";
         public static readonly string TradeStatusClosed = "CLOSED";

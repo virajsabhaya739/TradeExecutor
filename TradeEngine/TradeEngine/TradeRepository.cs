@@ -12,7 +12,7 @@ namespace TradeEngine
     /// <summary>
     /// Provides data access operations for managing trade and signal data in a SQLite database.
     /// </summary>
-    internal class TradeRepository
+    public class TradeRepository
     {
         // To create database aside the project folders, we needs to go out of the bin folder
         private readonly string _connectionString = "Data Source=" + System.IO.Path.Combine("..", "..", "..", "..", "..", Constants.DataBaseName);
