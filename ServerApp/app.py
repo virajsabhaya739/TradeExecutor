@@ -95,7 +95,7 @@ def receive_signal():
     """
     data = request.json
 
-    if data is not None:
+    if data is not None and 'symbol' in data:
         signal = Signal(
             Symbol=data['symbol'], 
             Full_Signal=json.dumps(data)
@@ -108,7 +108,7 @@ def receive_signal():
         
         return jsonify({"message": "Signal received"}), 200
     else:
-        return jsonify({"message": "Payload must no empty"}), 400
+        return jsonify({"message": "Payload must not be empty"}), 400
 
 @app.route('/api/trades', methods=['GET'])
 def get_trades():
