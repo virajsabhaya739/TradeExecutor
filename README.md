@@ -17,6 +17,7 @@ This project implements a simulated trading system with a .NET Core backend for 
 - `Dockerfile_Server.dockerfile`: Dockerfile for containerizing the Flask application.
 - `requirements.txt`: Lists the Python dependencies for the Flask application.
 - `Trade Signal Execution.postman_collection.json`: A Postman collection for testing the API endpoints.
+- Testcases are also included. For TradeEngine check `TradeEngine/TradeEngine.Tests` project and for ServerApp check `ServerApp/test_app.py` file
 
 ## Setup
 
